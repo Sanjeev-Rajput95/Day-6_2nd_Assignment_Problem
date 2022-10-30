@@ -154,6 +154,28 @@ namespace Day6Assignment2
             {
                 Console.WriteLine("You are Entered Wrong Input");
             }
+        }      
+
+        // Monthly Payements Program
+            public void Payment()
+            {
+                Console.Write("Enter the Principal : ");
+                double principal = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Enter the Year : ");
+                double year = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Enter the Rate : ");
+                double rate = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("");
+                Console.Write("Monthly Payment is " + monthlyPayment(principal, year, rate));
+                Console.WriteLine("");
+
         }
+        public static double monthlyPayment(double p, double y, double r)
+            {
+                double n = 12 * y;
+                double rpp = r / (12 * 100);
+                double payment = p * rpp / (1 - Math.Pow((1 + rpp), -n));
+                return payment;
+            }
     }
 }

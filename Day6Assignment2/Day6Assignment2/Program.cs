@@ -9,9 +9,12 @@ namespace Day6Assignment2
             Day6problems2 obj = new Day6problems2();
             Console.Write("enter amount : ");
             int amount = Convert.ToInt32(Console.ReadLine());
-            obj.RupeesNotes(amount);
-            obj.dayOfWeek();
-            obj.temperature_Conversion();
+                obj.RupeesNotes(amount);
+                obj.dayOfWeek();
+                obj.temperature_Conversion();
+            Day6problems2 month = new Day6problems2();
+            month.Payment();
+
         }
 
 
