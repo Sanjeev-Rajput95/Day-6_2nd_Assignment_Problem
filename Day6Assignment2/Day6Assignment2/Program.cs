@@ -1,4 +1,6 @@
-﻿namespace Day6Assignment2
+﻿using System;
+
+namespace Day6Assignment2
 {
     internal class Program
     {
@@ -7,7 +9,8 @@
             Day6problems2 obj = new Day6problems2();
             Console.Write("enter amount : ");
             int amount = Convert.ToInt32(Console.ReadLine());
-            obj.RupeesNotes(amount);
+         //   obj.RupeesNotes(amount);
+            obj.dayOfWeek();
         }
 
 
