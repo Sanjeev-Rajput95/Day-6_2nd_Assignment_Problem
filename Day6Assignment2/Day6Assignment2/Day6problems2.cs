@@ -8,8 +8,8 @@ namespace Day6Assignment2
 {
     internal class Day6problems2
     {
-
-      /*  public  void RupeesNotes(int amount)
+        
+        public  void RupeesNotes(int amount)
         {
             int[] currency = new int[] { 1, 2, 5, 10, 50,100, 500,1000 };
             int[] currencyCounter = new int[10];
@@ -31,7 +31,7 @@ namespace Day6Assignment2
                     Console.WriteLine(currency[i] + " : " + currencyCounter[i]);
                 }
             }
-        }    */
+        }    
 
         // DayOfWeek Problem 
 
@@ -119,6 +119,40 @@ namespace Day6Assignment2
                 default:
                     Console.WriteLine("invallid input given");
                     break;
+            }
+        }   
+
+        // Temperature Conversion Problem
+
+        public void temperature_Conversion ()
+        {
+            int Far = 0;
+            int cel = 1;
+            Console.WriteLine("Enter zero(0) to convert to celsius from farenheit : ");
+            Console.Write("Enter 1 to convert to celsius from farenheit : ");
+            
+
+            int check = Convert.ToInt32(Console.ReadLine());
+
+            if (check == 0)
+            {
+                Console.WriteLine("\n");
+                Console.Write("Enter the Temprature in Fahrenheit : ");
+                double F = Convert.ToDouble(Console.ReadLine());
+                double fc = Convert.ToDouble((F - 32) * 5 / 9);
+                Console.WriteLine($"{fc} Degree Celsius ");
+            }
+            else if (check == 1)
+            {
+                Console.WriteLine("\n");
+                Console.Write("Enter the Temprature in Celsius : ");
+                double C = Convert.ToDouble(Console.ReadLine());
+                double cf = Convert.ToDouble((C * 9 / 5) + 32);
+                Console.WriteLine($"{cf} Degree Farenheit");
+            }
+            else
+            {
+                Console.WriteLine("You are Entered Wrong Input");
             }
         }
     }
